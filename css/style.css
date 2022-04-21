@@ -28,14 +28,26 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'raleway';
+    src: url('../polices/raleway-semibold-webfont.eot');
+    src: url('../polices/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../polices/raleway-semibold-webfont.woff') format('woff'),
+         url('../polices/raleway-semibold-webfont.ttf') format('truetype'),
+         url('../polices/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    font-family: 'raleway', 'sans serif';
+    font-family: raleway, 'sans serif';
 }
 
 #bloc_page {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
-    margin-bottom: 30px;
 }
 
 /* header*/
@@ -48,13 +60,12 @@ header {
 }
 
 #logo {
-    padding-top: 20px;
     padding-left: 50px;
     display: flex;
 }
 
 #logo img {
-    width: 40%;
+    width: 35%;
 }
 
 nav {
@@ -79,7 +90,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: black;
-    opacity: 0.6;
     height: 100%;
     display: flex;
     align-items: center;
@@ -97,6 +107,10 @@ nav a:hover {
         flex-direction: column;
     }
 
+    nav a {
+        border-bottom: solid 2px #F2F2F2;
+    }
+
     nav a:hover {
         border-bottom: solid 2px #0065FC;
         border-top: none;
@@ -104,6 +118,7 @@ nav a:hover {
 
     nav {
         width: 100%;
+        height: 50px;
     }
 
     nav ul {
@@ -112,6 +127,7 @@ nav a:hover {
 
     #logo {
         padding-left: 0;
+        margin-top: 20px;
     }
 
     #logo img {
@@ -127,12 +143,13 @@ section {
     margin: 15px;
 }
 
-#section_1 {
+#section_recherche {
     padding-left: 15px;
 }
 
 #titre h2 {
     margin-bottom: 0;
+    font-size: 22px;
 }
 
 #titre p {
@@ -163,24 +180,23 @@ section {
     height: 50px;
 }
 
-#recherche #destination {
+#destination {
     border: solid 1px #F2F2F2;
     border-right: none;
     padding-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 #recherche #bouton_rechercher {
     color: white;
-    font-weight: 900;
+    font-weight: 600;
+    font-size: 18px;
     background-color: #0065FC;
     border: solid 1px #0065FC;
     border-radius: 0 20px 20px 0;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-#bouton_loupe {
-    visibility: hidden;
 }
 
 #bouton_loupe {
@@ -190,6 +206,7 @@ section {
     border-radius: 10px;
     position: relative;
     left: -10px;
+    display: none;
 }
 
 #loupe {
@@ -215,11 +232,21 @@ section {
 }
 
 @media screen and (max-width:768px) {
+
+    #section_recherche {
+        margin-top: 30px;
+    }
+
     #bouton_rechercher {
         display: none;
     }
+
     #bouton_loupe {
-        visibility: visible;
+        display: block;
+    }
+
+    .filtre {
+        margin-right: 10px;
     }
 }
 
@@ -264,13 +291,13 @@ section {
     align-items: center;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 25px;
     justify-content: center;
 }
 
 .filtre div:nth-child(2) {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 12px;
     font-weight: 600;       
 }
 
@@ -279,12 +306,20 @@ section {
 }
 
 @media screen and (max-width:992px) {
+
     #section_filtres {
         flex-direction: column;
     }
 
     #filtres {
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:778px) {
+    
+    .filtre {
+        margin-right: 8px;
     }
 }
 
@@ -311,7 +346,15 @@ section {
     height: 60px;
 }
 
-.titre_ensemble h2 {
+h3 {
+    font-size: 22px;
+}
+
+.titre_ensemble i {
+    font-size: 22px;
+}
+
+.titre_ensemble h3 {
     margin: 10px;
 }
 
@@ -329,6 +372,7 @@ section {
     background-color: white;
     padding: 5px;
     align-content: space-around;
+    box-shadow: 3px 3px 15px #d3d2d2;
 }
 
 #ensemble_cartes_1 .carte {
@@ -375,7 +419,9 @@ section {
 }
 
 .afficher_plus {
-    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
 }
 
 #ensemble_cartes_2 {
@@ -405,6 +451,7 @@ section {
     border-radius: 20px 20px 20px 20px;
     background-color: white;
     padding: 5px;
+    box-shadow: 3px 3px 15px #d3d2d2;
 }
 
 #ensemble_cartes_2 img {
@@ -432,7 +479,6 @@ section {
     #ensemble_cartes_1 .carte a {
         width: 100%;
     }
-
 }
 
 @media screen and (max-width:768px) {
@@ -470,9 +516,6 @@ section {
         width: 100%;
         margin: 7px;
         
-    }
-    #ensemble_cartes_1 .carte a {
-    box-shadow: 1px 1px 5px #F2F2F2, -1px 1px 5px #F2F2F2 ;
     }
 
     #ensemble_cartes_1 .carte a {
@@ -534,11 +577,7 @@ section {
 }
 
 .bloc_activites_simple .carte {
-    display: flex;                          /* a supprimer jusqu'à 552 ? */
-    flex-direction: column;
-    color: black;
-    text-decoration: none;
-    box-shadow: 1px 1px 5px #F2F2F2;
+    box-shadow: 3px 3px 15px #d3d2d2;
     border-radius: 20px;  
 }
 
@@ -561,7 +600,7 @@ section {
     flex-direction: column;
     color: black;
     text-decoration: none;
-    box-shadow: 1px 1px 5px #F2F2F2;
+    box-shadow: 3px 3px 15px #d3d2d2;
     border-radius: 20px;  
 }
 
@@ -574,7 +613,6 @@ section {
    
     #conteneur_activites {
         flex-direction: column;
-        width: 100%;                /* a supprimer ? */
     }
 
     #conteneur_activites img {

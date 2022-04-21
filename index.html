@@ -12,9 +12,9 @@
         <div id="bloc_page">
             <!-- header -->
             <header>
-                <div id="logo">
-                    <a href="#"><img src="images/logo/Booki@3x.png" alt="logo Booki"></a>
-                </div>
+                <a href="#" id="logo">
+                    <img src="images/logo/Booki@3x.png" alt="logo Booki">
+                </a>
                 <nav>
                     <ul>
                         <li><a href="#ensemble_cartes_1">Hébergements</a></li>
@@ -25,44 +25,44 @@
             <!-- main -->
             <main>
                 <!-- sections 1-->
-                <section id="section_1">
-                <div id="titre">
-                    <h2>Trouver votre hébergement pour des vacances de rêve</h2>
-                    <p>En plein centre ville ou en pleine nature</p>
-                </div>
-                <div id="recherche">
-                    <form method="post" action="traitement.php">
-                        <label for="destination"><i class="fa-solid fa-location-dot"></i></label>
-                        <input type="search" name="destination" id="destination" value="Marseille, France">
-                        <input id="bouton_rechercher" type="submit" value="Rechercher">
-                        <button id="bouton_loupe" type="submit" value=""><i id="loupe" class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>  
-                </div>
-                <div id="section_filtres">
-                    <div id="libelle_filtre">
-                        <div>
-                            Filtres
+                <section id="section_recherche">
+                    <div id="titre">
+                        <h2>Trouver votre hébergement pour des vacances de rêve</h2>
+                        <p>En plein centre ville ou en pleine nature</p>
+                    </div>
+                    <div id="recherche">
+                        <form method="post" action="traitement.php">
+                            <label for="destination"><i class="fa-solid fa-location-dot"></i></label>
+                            <input type="search" name="destination" id="destination" value="Marseille, France">
+                            <input id="bouton_rechercher" type="submit" value="Rechercher">
+                            <button id="bouton_loupe" type="submit" value=""><i id="loupe" class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>  
+                    </div>
+                    <div id="section_filtres">
+                        <div id="libelle_filtre">
+                            <div>
+                                Filtres
+                            </div>
+                        </div>
+                        <div id="filtres">
+                            <div class="filtre">
+                                <div><i class="fa-solid fa-money-bill-wave"></i></div>
+                                <div>Economique</div>
+                            </div>
+                            <div class="filtre">
+                                <div><i class="fa-solid fa-child-reaching"></i></div>
+                                <div>Familial</div>
+                            </div>
+                            <div class="filtre">
+                                <div><i class="fa-solid fa-heart"></i></div>
+                                <div>Romantique</div>
+                            </div>
+                            <div class="filtre">
+                                <div><i class="fa-solid fa-dog"></i></div>
+                                <div>Animaux autorisés</div>
+                            </div>
                         </div>
                     </div>
-                    <div id="filtres">
-                        <div class="filtre">
-                            <div><i class="fa-solid fa-money-bill-wave"></i></div>
-                            <div>Economique</div>
-                        </div>
-                        <div class="filtre">
-                            <div><i class="fa-solid fa-child-reaching"></i></div>
-                            <div>Familial</div>
-                        </div>
-                        <div class="filtre">
-                            <div><i class="fa-solid fa-heart"></i></div>
-                            <div>Romantique</div>
-                        </div>
-                        <div class="filtre">
-                            <div><i class="fa-solid fa-dog"></i></div>
-                            <div>Animaux autorisés</div>
-                        </div>
-                    </div>
-                </div>
                     <p id="info">
                         <i id="info_icone" class="fa-solid fa-info"></i>
                         Plus de 500 logements disponibles dans cette ville
@@ -212,7 +212,7 @@
                             </div>
                         </div>
                         <div class="afficher_plus">
-                            <h3>Afficher plus</h3>
+                            Afficher plus
                         </div>
                     </section>
                     <!-- bloc de droite -->
@@ -341,32 +341,32 @@
                         </div>
                     </div>
                 </section>
-                <!-- footer -->
-                <footer>
-                    <div>
+            </main>
+            <!-- footer -->
+            <footer>
+                <div>
                         <h4>A propos</h4>
                         <ul>
                             <li><a href="#">Fonctionnement du site</a></li>
                             <li><a href="#">Conditions générales de ventes</a></li>
                             <li><a href="#">Données et confidentialités</a></li>
                         </ul>
-                    </div>
-                    <div>
+                </div>
+                <div>
                         <h4>Nos hébergements</h4>
                         <ul>
                             <li><a href="#">Charte qualité</a></li>
                             <li><a href="#">Soumettre votre hôtel</a></li>
                         </ul>
-                    </div>
-                    <div>
+                </div>
+                <div>
                         <h4>Assistance</h4>
                         <ul>
                             <li><a href="#">Centre d'aide</a></li>
                             <li><a href="#">Nous contacter</a></li>
                         </ul>
-                    </div>
-                </footer>
-            </main>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
