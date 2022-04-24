@@ -183,7 +183,7 @@ section {
 #destination {
     border: solid 1px #F2F2F2;
     border-right: none;
-    padding-left: 20px;
+    padding-left: 15px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -247,6 +247,10 @@ section {
 
     .filtre {
         margin-right: 10px;
+    }
+
+    #destination {
+        max-width: 190px;
     }
 }
 
@@ -645,6 +649,10 @@ h3 {
 
     #activites {
         margin: 10px;
+    }
+
+    #activites h3 {
+        margin-top: 40px;
     }
 }
 
